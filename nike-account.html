@@ -14,14 +14,12 @@
 </head>
 
 <body>
-    <div class="header">
+    <div class="navbar">
+        <div class="logo">
+            <img src="images/nike.logo.png3.png" width="125px">
+        </div>
         <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo">NIKE</label>
-            <ul class="nav__links">
+            <ul id="MenuItems">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="product.html">products</a></li>
                 <li><a href="#footer">About</a></li>
@@ -29,13 +27,18 @@
                 <li><a href="nike-account.html">account</a></li>
             </ul>
         </nav>
+        <img src="images/menu.png" class="menu-icon" onclick="menutoggle()">
     </div>
+
+
+
+
     <!--account page-->
     <div class="account-page">
         <div class="container">
             <div class="row">
                 <div class="col-2 ">
-                  <div class="logo3">we<br>are nike!</div>
+                    <div class="logo3">we<br>are nike!</div>
                 </div>
                 <div class="col-2">
                     <div class="form-container">
@@ -57,7 +60,7 @@
                             <input type="email" placeholder="E-mail">
                             <input type="password" placeholder="password">
                             <button type="submit" class="btn">register</button>
-                            
+
                         </form>
 
                     </div>
@@ -110,23 +113,39 @@
         </div>
     </div>
     <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
+    <script>
         var Loginform = document.getElementById("Loginform");
         var Regform = document.getElementById("Regform");
         var Indicator = document.getElementById("Indicator");
 
 
-        function register(){
+        function register() {
             Regform.style.transform = "translateX(0px)";
             Loginform.style.transform = "translateX(0px)";
             Indicator.style.transform = "translateX(100px)";
-           
+
         }
 
-        function login(){
+        function login() {
             Regform.style.transform = "translateX(300px)";
             Loginform.style.transform = "translateX(300px)";
             Indicator.style.transform = "translateX(0px)";
-            
+
 
         }
     </script>

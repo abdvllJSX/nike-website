@@ -15,39 +15,45 @@
 
 <body>
     <div class="header">
-        <nav>
-            <input type="checkbox" id="check">
-            <label for="check" class="checkbtn">
-                <i class="fas fa-bars"></i>
-            </label>
-            <label class="logo">NIKE</label>
-            <ul class="nav__links">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="product.html">products</a></li>
-                <li><a href="#footer">About</a></li>
-                <li><a href="#footer">Contact</a></li>
-                <li><a href="nike-account.html">account</a></li>
-            </ul>
-        </nav>
-
-
         <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="images/nike.logo.png3.png" width="125px">
+                </div>
+                <nav>
+                    <ul id="MenuItems">
+                        <li><a class="active" href="index.html">Home</a></li>
+                        <li><a href="product.html">products</a></li>
+                        <li><a href="#footer">About</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                        <li><a href="nike-account.html">account</a></li>
+                    </ul>
+                </nav>
+                <img src="images/menu.png" class="menu-icon"
+                onclick="menutoggle()">
+            </div>
+
+
+
             <div class="row">
                 <div class="col-2">
                     <h1 class="main_header_content_h1" id="header">NIKE SHOES</h1>
-                    <p class="main_header_content_p">Lorem ipsum dolor,<br> sit amet consectetur adipisicing 
+                    <p class="main_header_content_p">Lorem ipsum dolor,<br> sit amet consectetur adipisicing
                         <br>Necessitatibus,
-                        tempore? Ipsum facilis <br>unde deleniti reprehenderit incidunt<br> molestiae, possimus eum sunt <br>error
+                        tempore? Ipsum facilis <br>unde deleniti reprehenderit incidunt<br> molestiae, possimus eum sunt
+                        <br>error
                         earum.
-                        Animi eaque magnam <br>assumenda ratione quo voluptatibus<br> consequatur.</p>
+                        Animi eaque magnam <br>assumenda ratione quo voluptatibus<br> consequatur.
+                    </p>
                     <button class="btn">EXPLORE</button>
                 </div>
                 <div class="col-2"">
-        <img src=" images/nike.airforce1.png" alt="nike-sneaker" height="400px">
+            <img src=" images/nike.airforce1.png" alt="nike-sneaker" height="400px">
                 </div>
             </div>
         </div>
     </div>
+
 
     <div class="footer" id="footer">
         <div class="container">
@@ -92,6 +98,23 @@
             <p class="copy-right">copyright 2020 - CVDOW 2022</p>
         </div>
     </div>
+    <!---js for toggle menu-->
+    <script>
+        var MenuItems = document.getElementById("MenuItems");
+
+        MenuItems.style.maxHeight = "0px";
+
+        function menutoggle(){
+            if(MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+            else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+        }
+    </script>
 </body>
 
 </html>
